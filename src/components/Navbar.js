@@ -5,10 +5,10 @@ const { Text } = Typography;
 export default function Navbar() {
   return (
     <Row>
-      <Col span={11} offset={1}>
+      <Col span={13} offset={1}>
         <Text>Logo</Text>
       </Col>
-      <Col span={11}>
+      <Col span={9}>
         <Menu mode="horizontal" style={{ border: "none", float: "right" }}>
           <Menu.Item key="SepedaAnak">Sepeda Anak</Menu.Item>
           <Menu.Item key="SepedaLipat">Sepeda Lipat</Menu.Item>

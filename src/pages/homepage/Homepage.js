@@ -13,13 +13,28 @@
 //_Footer
 
 import { Row, Col } from "antd";
+import Alasan from "../../components/Alasan";
+import Footer from "../../components/Footer";
+import JenisSepeda from "../../components/JenisSepeda";
+import LandingPage from "../../components/LandingPage";
 
 import Navbar from "../../components/Navbar";
 
 export default function Homepage() {
   return (
-    <Col span={24}>
-      <Navbar />
-    </Col>
+    <Row>
+      <Col span={24}>
+        <LandingPage />
+      </Col>
+      <Col span={24}>
+        <Alasan />
+      </Col>
+      <Col span={24}>
+        <JenisSepeda />
+      </Col>
+      <Col span={24}>
+        <Footer />
+      </Col>
+    </Row>
   );
 }
