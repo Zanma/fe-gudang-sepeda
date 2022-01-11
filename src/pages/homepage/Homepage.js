@@ -18,8 +18,6 @@ import Footer from "../../components/Footer";
 import JenisSepeda from "../../components/JenisSepeda";
 import LandingPage from "../../components/LandingPage";
 
-import Navbar from "../../components/Navbar";
-
 export default function Homepage() {
   return (
     <Row>
