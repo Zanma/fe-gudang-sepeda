@@ -1,9 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Switch,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Homepage from "./pages/homepage/Homepage.js";
 import DetailSepeda from "./pages/detailSepeda/DetailSepeda.js";
@@ -15,8 +10,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/detail" element={<DetailSepeda />} />
+          <Route path="/dashboard/:jenisSepeda" element={<Dashboard />} />
+          <Route path="/detail/:id" element={<DetailSepeda />} />
         </Routes>
       </Router>
     </div>

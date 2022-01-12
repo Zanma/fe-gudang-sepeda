@@ -1,0 +1,24 @@
+{
+    "products":[
+        {
+            "id": 1,
+            "title": "SEPEDA GUNUNG",
+            "pict": "http://localhost:3000/assets/sepedaGunung.png",
+            "price": "Rp 1.250.000",
+            "jenisSepeda": "sepedaGunung",
+            "ukuranRoda": "20",
+            "jenisBan": "Karet",
+            "musik": "Tidak ada"
+          },
+          {
+            "id": 2,
+            "title": "SEPEDA BMX",
+            "pict": "http://localhost:3000/assets/sepedaBMX.png",
+            "price": "Rp 1.250.000",
+            "jenisSepeda": "sepedaBMX",
+            "ukuranRoda": "20",
+            "jenisBan": "Karet",
+            "musik": "Tidak ada"
+          }
+    ]
+}

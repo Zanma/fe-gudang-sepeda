@@ -1,4 +1,5 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 import { Row, Col, Typography, Button, Image } from "antd";
 import Navbar from "../../components/Navbar";
@@ -8,8 +9,9 @@ import detailFotoSepeda from "../../assets/detailFotoSepeda.png";
 
 const { Text, Title } = Typography;
 
-const DeskripsiDetailSepeda = () => {
+const DeskripsiDetailSepeda = ({ detailProduct }) => {
   const navigate = useNavigate();
+
   return (
     <Row
       style={{ backgroundColor: "#FFF9F1", paddingTop: "70px", height: "100%" }}
@@ -17,7 +19,7 @@ const DeskripsiDetailSepeda = () => {
       <Col span={24}>
         <Row>
           <Col span={2} offset={1}>
-            <a onClick={() => navigate("/dashboard")}>
+            <a onClick={() => navigate("/dashboard/semua")}>
               <img
                 src={iconBack}
                 alt=""
@@ -28,11 +30,11 @@ const DeskripsiDetailSepeda = () => {
         </Row>
         <Row justify="center" style={{ marginTop: "60px" }}>
           <Col span={15}>
-            <Title>FOLDING POCKET ROCKET</Title>
+            <Title>{detailProduct.title}</Title>
           </Col>
           <Col span={15}>
             <Title type="danger" level={2}>
-              Rp 1.250.000
+              {detailProduct.price}
             </Title>
           </Col>
           <Col span={15}>
@@ -51,7 +53,7 @@ const DeskripsiDetailSepeda = () => {
                   </Col>
                   <Col span={24}>
                     <Text strong style={{ fontSize: "24px" }}>
-                      20"
+                      {detailProduct.ukuranRoda}
                     </Text>
                   </Col>
                 </Row>
@@ -63,7 +65,7 @@ const DeskripsiDetailSepeda = () => {
                   </Col>
                   <Col span={24}>
                     <Text strong style={{ fontSize: "24px" }}>
-                      Karet
+                      {detailProduct.jenisBan}
                     </Text>
                   </Col>
                 </Row>
@@ -75,7 +77,7 @@ const DeskripsiDetailSepeda = () => {
                   </Col>
                   <Col span={24}>
                     <Text strong style={{ fontSize: "24px" }}>
-                      Tidak ada
+                      {detailProduct.musik}
                     </Text>
                   </Col>
                 </Row>
@@ -105,10 +107,10 @@ const DeskripsiDetailSepeda = () => {
   );
 };
 
-const DetailFotoSepeda = () => (
+const DetailFotoSepeda = ({ detailProduct }) => (
   <Row style={{ padding: "50px 0" }}>
     <Col span={23} offset={1}>
-      <Image width="100%" height="auto" src={detailFotoSepeda} />
+      <Image width="100%" height="auto" src={detailProduct.pict} />
     </Col>
     <Col span={22} offset={2}>
       <Row>
@@ -119,16 +121,30 @@ const DetailFotoSepeda = () => (
 );
 
 export default function DetailSepeda() {
+  const [detailProduct, setDetailProduct] = useState([]);
+  const { id } = useParams();
+
+  useEffect(() => {
+    getProductById();
+  }, []);
+
+  const getProductById = async () => {
+    const response = await fetch(`http://localhost:3000/products/${id}`);
+    const data = await response.json();
+    console.log(data);
+    setDetailProduct(data);
+  };
+
   return (
     <Row>
       <Col span={24}>
         <Navbar />
       </Col>
       <Col span={11}>
-        <DeskripsiDetailSepeda />
+        <DeskripsiDetailSepeda detailProduct={detailProduct} />
       </Col>
       <Col span={13}>
-        <DetailFotoSepeda />
+        <DetailFotoSepeda detailProduct={detailProduct} />
       </Col>
     </Row>
   );

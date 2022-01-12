@@ -23,7 +23,7 @@ const Description = () => {
           type="primary"
           danger
           style={{ borderRadius: 5, marginTop: "50px" }}
-          onClick={() => navigate("/dashboard")}
+          onClick={() => navigate("/dashboard/semua")}
         >
           Lihat Sepeda
         </Button>
