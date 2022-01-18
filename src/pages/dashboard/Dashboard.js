@@ -4,20 +4,22 @@
 // Header
 // ListSepeda
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 
 import { useNavigate, useParams } from "react-router-dom";
 
 import { Row, Col, Typography, Menu, Card } from "antd";
 
 import Navbar from "../../components/Navbar";
-import JenisSepeda from "../../components/JenisSepeda";
+import { ProductContext } from "../../context/ProductContext";
 
 const { Title, Text } = Typography;
 
 const DashboardHeader = ({ filterProduct }) => {
   const navigate = useNavigate();
-  const [current, setCurrent] = useState("semua");
+  const { jenisSepeda } = useParams();
+
+  const [current, setCurrent] = useState(jenisSepeda);
 
   const handleClick = (e) => {
     navigate("/dashboard/" + e.key); //gk ngaruh logic, cuma estetik url
@@ -79,30 +81,26 @@ const ListSepeda = ({ products }) => {
 };
 
 export default function Dashboard() {
-  const [product, setProduct] = useState([]);
+  const { product } = useContext(ProductContext);
+
+  const { jenisSepeda } = useParams();
+
   const [filteredProduct, setFilteredProduct] = useState([]);
 
-  useEffect(() => {
-    fetchProduct();
-  }, []);
-
-  const fetchProduct = async () => {
-    const response = await fetch("http://localhost:3000/products");
-    const data = await response.json();
-    setProduct(data);
-    setFilteredProduct(data); //melakukan inisiasi nilai filteredProduct
-  };
-
   //melakukan filter dengan parameter jenisSepeda dari component "Dashboard header"
-  const filterProduct = (jenisSepeda) => {
-    if (jenisSepeda !== "semua") {
+  const filterProduct = (pilihan) => {
+    if (pilihan !== "semua") {
       setFilteredProduct(
-        product.filter((product) => product.jenisSepeda === jenisSepeda)
+        product.filter((product) => product.jenisSepeda === pilihan)
       ); //mesti pakai tambahan setFilteredProduct, kalau langsung pke setProduct(), ntar ilang data product rawnya
     } else {
-      setFilteredProduct(product);
+      setFilteredProduct(product); //coba cek lagi disini, dikasih logic
     }
   };
+
+  useEffect(() => {
+    filterProduct(jenisSepeda); //melakukan filter berdasar pilihan user dr homepage, ketika pertama kali render
+  }, [jenisSepeda]);
 
   return (
     <Row>

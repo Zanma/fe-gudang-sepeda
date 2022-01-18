@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 
 import ImageLandingPage from "../assets/landingPage.png";
 
-const { Text, Title, Paragraph } = Typography;
+const { Title, Paragraph } = Typography;
 
 const Description = () => {
   const navigate = useNavigate();

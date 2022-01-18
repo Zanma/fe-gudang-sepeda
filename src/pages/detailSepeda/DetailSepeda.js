@@ -131,7 +131,6 @@ export default function DetailSepeda() {
   const getProductById = async () => {
     const response = await fetch(`http://localhost:3000/products/${id}`);
     const data = await response.json();
-    console.log(data);
     setDetailProduct(data);
   };
 
