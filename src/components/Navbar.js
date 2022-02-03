@@ -20,8 +20,15 @@ export default function Navbar() {
             Sepeda Anak
           </Menu.Item>
           <Menu.Item key="SepedaLipat">Sepeda Lipat</Menu.Item>
-          <Menu.Item key="BMX">BMX</Menu.Item>
-          <Menu.Item key="Sepeda Gunung">Sepeda Gunung</Menu.Item>
+          <Menu.Item key="BMX" onClick={() => navigate("/dashboard/sepedaBMX")}>
+            BMX
+          </Menu.Item>
+          <Menu.Item
+            key="Sepeda Gunung"
+            onClick={() => navigate("/dashboard/sepedaGunung")}
+          >
+            Sepeda Gunung
+          </Menu.Item>
           <Menu.Item key="Kontak">Kontak</Menu.Item>
         </Menu>
       </Col>

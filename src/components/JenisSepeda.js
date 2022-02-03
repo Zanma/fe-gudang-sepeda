@@ -40,7 +40,7 @@ const ListJenisSepeda = () => {
           onClick={() => navigate("/dashboard/sepedaBMX")}
         >
           <Meta
-            title="Sepeda Gunung (MTB)"
+            title="Sepeda BMX"
             description="Sepeda yang cocok bagi Anda ingin merasakan sepeda gunung serbaguna untuk off-road ringan di akhir pekan"
           />
         </Card>

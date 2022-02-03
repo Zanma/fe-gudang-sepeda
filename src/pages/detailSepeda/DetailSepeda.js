@@ -124,15 +124,15 @@ export default function DetailSepeda() {
   const [detailProduct, setDetailProduct] = useState([]);
   const { id } = useParams();
 
-  useEffect(() => {
-    getProductById();
-  }, []);
-
   const getProductById = async () => {
     const response = await fetch(`http://localhost:3000/products/${id}`);
     const data = await response.json();
     setDetailProduct(data);
   };
+
+  useEffect(() => {
+    getProductById();
+  }, []);
 
   return (
     <Row>

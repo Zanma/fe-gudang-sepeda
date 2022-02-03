@@ -19,11 +19,8 @@ const DashboardHeader = ({ filterProduct }) => {
   const navigate = useNavigate();
   const { jenisSepeda } = useParams();
 
-  const [current, setCurrent] = useState(jenisSepeda);
-
   const handleClick = (e) => {
     navigate("/dashboard/" + e.key); //gk ngaruh logic, cuma estetik url
-    setCurrent(e.key);
     filterProduct(e.key); //melempar trigger jenisSepeda ke componen atas untuk difilter & ditampilkan
   };
 
@@ -38,7 +35,7 @@ const DashboardHeader = ({ filterProduct }) => {
             <Menu
               mode="horizontal"
               onClick={handleClick}
-              selectedKeys={current}
+              selectedKeys={jenisSepeda} //berubah sesuai parameter url
             >
               <Menu.Item key="semua">Semua</Menu.Item>
               <Menu.Item key="sepedaAnak">Sepeda Anak</Menu.Item>
@@ -82,6 +79,8 @@ const ListSepeda = ({ products }) => {
 
 export default function Dashboard() {
   const { product } = useContext(ProductContext);
+
+  console.log(product);
 
   const { jenisSepeda } = useParams();
 
