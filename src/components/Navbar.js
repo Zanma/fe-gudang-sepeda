@@ -19,7 +19,12 @@ export default function Navbar() {
           >
             Sepeda Anak
           </Menu.Item>
-          <Menu.Item key="SepedaLipat">Sepeda Lipat</Menu.Item>
+          <Menu.Item
+            key="SepedaLipat"
+            onClick={() => navigate("/dashboard/sepedaLipat")}
+          >
+            Sepeda Lipat
+          </Menu.Item>
           <Menu.Item key="BMX" onClick={() => navigate("/dashboard/sepedaBMX")}>
             BMX
           </Menu.Item>

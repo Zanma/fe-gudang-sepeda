@@ -2,20 +2,100 @@
     "products":[
         {
             "id": 1,
-            "title": "SEPEDA GUNUNG",
-            "pict": "http://localhost:3000/assets/sepedaGunung.png",
-            "price": "Rp 1.250.000",
+            "title": "MTB FALCON",
+            "pict": "http://localhost:3000/assets/sepedaGunungHitam.png",
+            "price": "Rp 2.175.000",
             "jenisSepeda": "sepedaGunung",
-            "ukuranRoda": "20",
+            "ukuranRoda": "27,5",
             "jenisBan": "Karet",
             "musik": "Tidak ada"
           },
           {
             "id": 2,
-            "title": "SEPEDA BMX",
-            "pict": "http://localhost:3000/assets/sepedaBMX.png",
-            "price": "Rp 1.250.000",
+            "title": "MTB STORM",
+            "pict": "http://localhost:3000/assets/sepedaGunungPutih.png",
+            "price": "Rp 2.500.000",
+            "jenisSepeda": "sepedaGunung",
+            "ukuranRoda": "27,5",
+            "jenisBan": "Karet",
+            "musik": "Tidak ada"
+          },
+          {
+            "id": 3,
+            "title": "POCKET ROCKET X3",
+            "pict": "http://localhost:3000/assets/sepedaLipatBiru.png",
+            "price": "Rp 3.800.000",
+            "jenisSepeda": "sepedaLipat",
+            "ukuranRoda": "20",
+            "jenisBan": "Karet",
+            "musik": "Tidak ada"
+          },
+          {
+            "id": 4,
+            "title": "POCKET ROCKET X2",
+            "pict": "http://localhost:3000/assets/sepedaLipatHitam.png",
+            "price": "Rp 3.200.000",
+            "jenisSepeda": "sepedaLipat",
+            "ukuranRoda": "20",
+            "jenisBan": "Karet",
+            "musik": "Tidak ada"
+          },
+          {
+            "id": 5,
+            "title": "FOLDING POCKET ROCKET",
+            "pict": "http://localhost:3000/assets/sepedaLipatKuning.png",
+            "price": "Rp 3.000.000",
+            "jenisSepeda": "sepedaLipat",
+            "ukuranRoda": "20",
+            "jenisBan": "Karet",
+            "musik": "Tidak ada"
+          },
+          {
+            "id": 7,
+            "title": "BMX DRAGSTER",
+            "pict": "http://localhost:3000/assets/sepedaBMXHitam.png",
+            "price": "Rp 1.650.000",
             "jenisSepeda": "sepedaBMX",
+            "ukuranRoda": "20",
+            "jenisBan": "Karet",
+            "musik": "Tidak ada"
+          },
+          {
+            "id": 8,
+            "title": "BMX SHOTGUN",
+            "pict": "http://localhost:3000/assets/sepedaBMXPutih.png",
+            "price": "Rp 1.650.000",
+            "jenisSepeda": "sepedaBMX",
+            "ukuranRoda": "20",
+            "jenisBan": "Karet",
+            "musik": "Tidak ada"
+          },
+          {
+            "id": 9,
+            "title": "BMX THRASHER",
+            "pict": "http://localhost:3000/assets/sepedaBMXKuning.png",
+            "price": "Rp 1.675.000",
+            "jenisSepeda": "sepedaBMX",
+            "ukuranRoda": "20",
+            "jenisBan": "Karet",
+            "musik": "Tidak ada"
+          },
+          {
+            "id": 10,
+            "title": "KIDS CLARA",
+            "pict": "http://localhost:3000/assets/sepedaAnakPink.png",
+            "price": "Rp 1.675.000",
+            "jenisSepeda": "sepedaAnak",
+            "ukuranRoda": "20",
+            "jenisBan": "Karet",
+            "musik": "Tidak ada"
+          },
+          {
+            "id": 11,
+            "title": "KIDS YUNA",
+            "pict": "http://localhost:3000/assets/sepedaAnakUngu.png",
+            "price": "Rp 1.675.000",
+            "jenisSepeda": "sepedaAnak",
             "ukuranRoda": "20",
             "jenisBan": "Karet",
             "musik": "Tidak ada"
