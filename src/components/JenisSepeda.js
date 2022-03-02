@@ -14,12 +14,13 @@ const ListJenisSepeda = () => {
 
   return (
     <Row justify="center">
-      <Col span={4}>
+      <Col lg={{ span: 4 }} xxl={{ span: 3 }}>
         <Card
           hoverable
           bordered={false}
           style={{
-            width: 300,
+            width: 265,
+            height: 335,
             border: "0.5px solid rgba(155,155,155,0.3)",
           }}
           cover={<img alt="example" src={sepedaGunung} />}
@@ -31,12 +32,13 @@ const ListJenisSepeda = () => {
           />
         </Card>
       </Col>
-      <Col span={4}>
+      <Col lg={{ span: 4, offset: 1 }} xxl={{ span: 3 }}>
         <Card
           hoverable
           bordered={false}
           style={{
-            width: 300,
+            width: 265,
+            height: 335,
             border: "0.5px solid rgba(155,155,155,0.3)",
           }}
           cover={<img alt="example" src={sepedaLipat} />}
@@ -48,12 +50,13 @@ const ListJenisSepeda = () => {
           />
         </Card>
       </Col>
-      <Col span={4}>
+      <Col lg={{ span: 4, offset: 1 }} xxl={{ span: 3 }}>
         <Card
           hoverable
           bordered={false}
           style={{
-            width: 300,
+            width: 265,
+            height: 335,
             border: "0.5px solid rgba(155,155,155,0.3)",
           }}
           cover={<img alt="example" src={sepedaBMX} />}
@@ -65,12 +68,13 @@ const ListJenisSepeda = () => {
           />
         </Card>
       </Col>
-      <Col span={4}>
+      <Col lg={{ span: 4, offset: 1 }} xxl={{ span: 3 }}>
         <Card
           hoverable
           bordered={false}
           style={{
-            width: 300,
+            width: 265,
+            height: 335,
             border: "0.5px solid rgba(155,155,155,0.3)",
           }}
           cover={<img alt="example" src={sepedaAnak} />}

@@ -1,8 +1,8 @@
 import { Row, Col, Typography } from "antd";
+import { useNavigate } from "react-router-dom";
 
 import iconEmail from "../assets/iconEmail.png";
 import iconWA from "../assets/iconWA.png";
-import iconPhone from "../assets/iconPhone.png";
 import iconTwitter from "../assets/iconTwitter.png";
 import iconIG from "../assets/iconIG.png";
 import iconYT from "../assets/iconYT.png";
@@ -16,7 +16,7 @@ const KontakFooter = () => (
     <Col span={24}>
       <Title>Gudang Sepeda</Title>
     </Col>
-    <Col span={17}>
+    <Col span={18}>
       <Row
         gutter={[0, 10]}
         style={{ borderBottom: "1px solid black", paddingBottom: "10px" }}
@@ -43,16 +43,16 @@ const KontakFooter = () => (
     </Col>
     <Col span={24}>
       <Row style={{ marginTop: "10px" }}>
-        <Col span={3}>
+        <Col span={4}>
           <img src={iconTwitter} alt="" />
         </Col>
-        <Col span={3}>
+        <Col span={4}>
           <img src={iconIG} alt="" />
         </Col>
-        <Col span={3}>
+        <Col span={4}>
           <img src={iconYT} alt="" />
         </Col>
-        <Col span={3}>
+        <Col span={4}>
           <img src={iconFacebook} alt="" />
         </Col>
       </Row>
@@ -81,25 +81,35 @@ const Alamat = () => (
   </Row>
 );
 
-const ProdukFooter = () => (
-  <Row style={{ marginTop: "15px" }}>
-    <Col span={24}>
-      <Title level={4}>Produk</Title>
-    </Col>
-    <Col span={24}>
-      <Text>Sepeda Anak</Text>
-    </Col>
-    <Col span={24}>
-      <Text>Sepeda Lipat</Text>
-    </Col>
-    <Col span={24}>
-      <Text>BMX</Text>
-    </Col>
-    <Col span={24}>
-      <Text>Sepeda Gunung</Text>
-    </Col>
-  </Row>
-);
+const ProdukFooter = () => {
+  const navigate = useNavigate();
+
+  return (
+    <Row style={{ marginTop: "15px" }}>
+      <Col span={24}>
+        <Title level={4}>Produk</Title>
+      </Col>
+      <Col span={24}>
+        <Text onClick={() => navigate("/dashboard/sepedaAnak")}>
+          Sepeda Anak
+        </Text>
+      </Col>
+      <Col span={24}>
+        <Text onClick={() => navigate("/dashboard/sepedaLipat")}>
+          Sepeda Lipat
+        </Text>
+      </Col>
+      <Col span={24}>
+        <Text onClick={() => navigate("/dashboard/sepedaBMX")}>BMX</Text>
+      </Col>
+      <Col span={24}>
+        <Text onClick={() => navigate("/dashboard/sepedaGunung")}>
+          Sepeda Gunung
+        </Text>
+      </Col>
+    </Row>
+  );
+};
 
 export default function Footer() {
   return (
