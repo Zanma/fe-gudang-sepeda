@@ -26,11 +26,15 @@ const DashboardHeader = ({ filterProduct }) => {
 
   return (
     <Row>
-      <Col span={5} offset={2}>
+      <Col span={7} offset={2}>
         <Title>Pilih sepeda sesuai kebutuhanmu</Title>
       </Col>
       <Col span={24}>
-        <Row>
+        <Row
+          style={{
+            marginBottom: "20px",
+          }}
+        >
           <Col span={10} offset={2}>
             <Menu
               mode="horizontal"
@@ -54,9 +58,16 @@ const ListSepeda = ({ products }) => {
   const navigate = useNavigate();
 
   return (
-    <Row justify="start" gutter={[40, 50]}>
+    <Row
+      justify="start"
+      gutter={[40, 50]}
+      style={{
+        margin: "0px 100px",
+        marginBottom: "50px",
+      }}
+    >
       {products.map((products) => (
-        <Col span={5} key={products.id}>
+        <Col span={6} key={products.id}>
           <Card
             hoverable
             bordered={false}
