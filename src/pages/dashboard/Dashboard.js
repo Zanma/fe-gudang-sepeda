@@ -62,8 +62,10 @@ const ListSepeda = ({ products }) => {
       justify="start"
       gutter={[40, 50]}
       style={{
-        margin: "0px 100px",
+        marginTop: "0px",
         marginBottom: "50px",
+        marginLeft: "100px",
+        marginRight: "100px",
       }}
     >
       {products.map((products) => (
@@ -90,8 +92,6 @@ const ListSepeda = ({ products }) => {
 
 export default function Dashboard() {
   const { product } = useContext(ProductContext);
-
-  console.log(product);
 
   const { jenisSepeda } = useParams();
 

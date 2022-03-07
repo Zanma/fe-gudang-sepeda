@@ -12,7 +12,11 @@ export default function Navbar() {
         <Text onClick={() => navigate("/")}>Logo</Text>
       </Col>
       <Col span={9}>
-        <Menu mode="horizontal" style={{ border: "none", float: "right" }}>
+        <Menu
+          mode="horizontal"
+          selectedKeys={""} //biar gk ke save selected langsung ilang
+          style={{ border: "none", float: "right" }}
+        >
           <Menu.Item
             key="SepedaAnak"
             onClick={() => navigate("/dashboard/sepedaAnak")}
